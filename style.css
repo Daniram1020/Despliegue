@@ -1,88 +1,123 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 300% 300%;
+    animation: gradientBG 12s ease infinite;
     min-height: 100vh;
     padding: 20px;
+    color: #333;
 }
 
-.container{
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
+/* Animación de fondo */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffffee;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    backdrop-filter: blur(8px);
 }
 
-header{
-    background: linear-gradient(45deg, #FF6868, #4ECDC4);
+/* Encabezado */
+header {
+    background: linear-gradient(45deg, #005bea, #00c6fb);
     color: white;
-    padding: 30px;
+    padding: 40px 20px;
     text-align: center;
 }
 
-header h1{
-    font-size: 2.5em;
+header h1 {
+    font-size: 2.8em;
+    letter-spacing: 1.5px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
-main{
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Cuerpo principal */
+main {
     padding: 40px;
 }
 
+/* Contador */
 .contador {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.contador h2{
-    color: #333;
-    margin-bottom: 20px;
+.contador h2 {
+    color: #005bea;
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
-#contador{
+#contador {
     font-size: 3em;
-    color: #FF6868;
+    color: #00c6fb;
     font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
-button{
-    background: linear-gradient(45deg, #FF6868, #4ECDC4);
+/* Botones */
+button {
+    background: linear-gradient(45deg, #005bea, #00c6fb);
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 35px;
     margin: 10px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 1.1em;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 91, 234, 0.3);
 }
 
-button:hover{
-    transform: translateY(-2px);
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 91, 234, 0.4);
 }
 
-.status-card{
+/* Tarjeta de estado */
+.status-card {
     background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid #4ECDC4;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 6px solid #00c6fb;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .status-card p {
     margin: 10px 0;
-    font-size: 1.1em
+    font-size: 1.15em;
+    line-height: 1.5;
 }
 
-footer{
-    background: #333;
+/* Pie de página */
+footer {
+    background: #002f4b;
     color: white;
     text-align: center;
     padding: 20px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
 }
